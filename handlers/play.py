@@ -480,8 +480,8 @@ async def play(_, message: Message):
                 ],                     
                 [
                     InlineKeyboardButton(
-                        text="Watch On YouTube 🎬",
-                        url=f"{url}")
+                        text="LOVE IS WAR",
+                        url=f"https://t.me/loveiswarxvii")
 
                 ],
                 [       
@@ -523,7 +523,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="▶️ **Playing** here the song requested by {} via DaisyXmusic 😜".format(
+        caption="▶️ **Memulai** here the song requested by {} via XVII MUSIC ᕙ(`▿´)ᕗ".format(
         message.from_user.mention()
         ),
     )
@@ -638,7 +638,7 @@ async def deezer(client: Client, message_: Message):
         qeue.append(appendable)
         await res.edit_text(f"Playing [{title}]({url}) Via Deezer")
     else:
-        await res.edit_text("✯DaisyXmusic✯=▶️ Playing.....")
+        await res.edit_text("✯XVIIMusic✯=▶️ Playing.....")
         chat_id = message_.chat.id
         que[chat_id] = []
         qeue = que.get(message_.chat.id)
