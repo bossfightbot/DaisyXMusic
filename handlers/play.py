@@ -308,7 +308,7 @@ async def m_cb(b, cb):
         temp.pop(0)
         if temp:
              msg += '\n\n'
-             msg += '**Queue**'
+             msg += '**mengantri**'
              for song in temp:
                  name = song[0]
                  usr = song[1].mention(style='md')
@@ -325,7 +325,7 @@ async def m_cb(b, cb):
                 await cb.answer('Chat is not connected or already playng', show_alert=True)
         else:
             callsmusic.pytgcalls.resume_stream(chat_id)
-            await cb.answer('Music Resumed!')     
+            await cb.answer('Music di jeda!')     
     elif type_ == 'puse':         
         if (
             chat_id not in callsmusic.pytgcalls.active_calls
@@ -399,7 +399,7 @@ async def m_cb(b, cb):
 @Client.on_message(command("play") & other_filters)
 async def play(_, message: Message):
     global que
-    lel = await message.reply("🔄 **Processing**")
+    lel = await message.reply("🔄 **memproses**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
     usar = await USER.get_me()
@@ -410,7 +410,7 @@ async def play(_, message: Message):
                    invitelink = await _.export_chat_invite_link(chid)
                except:
                    await lel.edit(
-                       "<b>Add me as admin of yor group first</b>",
+                       "<b>tambahkan aku sebagai admin dulu</b>",
                    )
                    return
 
@@ -426,7 +426,7 @@ async def play(_, message: Message):
                    #print(e)
                    #await lel.edit(
                    #    f"<b>User {user.first_name} couldn't join your group! Make sure user is not banned in group."
-                   #    "\n\nOr manually add @DaisyXmusic to your Group and try again</b>",
+                   #    "\n\nOr manually add @LIFEISUCKX to your Group and try again</b>",
                    #)
                    pass
     try:
@@ -439,7 +439,7 @@ async def play(_, message: Message):
         return    
     sender_id = message.from_user.id
     sender_name = message.from_user.first_name
-    await lel.edit("🔎 **Finding**")
+    await lel.edit("🔎 **MENCARI**")
     sender_id = message.from_user.id
     user_id = message.from_user.id
     sender_name = message.from_user.first_name
@@ -450,7 +450,7 @@ async def play(_, message: Message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    await lel.edit("🎵 **Processing**")
+    await lel.edit("🎵 **memproses**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -466,7 +466,7 @@ async def play(_, message: Message):
         views = results[0]["views"]
 
     except Exception as e:
-        await lel.edit("Song not found.Try another song or maybe spell it properly.")
+        await lel.edit("lagu tidak di temukan.coba ejaan yang benar atau coba lagu lain.")
         print(str(e))
         return
 
@@ -480,7 +480,7 @@ async def play(_, message: Message):
                 ],                     
                 [
                     InlineKeyboardButton(
-                        text="LOVE IS WAR",
+                        text="JOIN YUK 🥰",
                         url=f"https://t.me/loveiswarxvii")
 
                 ],
@@ -506,7 +506,7 @@ async def play(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
         photo="final.png", 
-        caption=f"#⃣ Your requested song **queued** at position {position}!",
+        caption=f"#⃣ Your requested song **mengantri** at position {position}!",
         reply_markup=keyboard)
         os.remove("final.png")
         return await lel.delete()
@@ -523,7 +523,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="▶️ **Memulai** here the song requested by {} via XVII MUSIC ᕙ(`▿´)ᕗ".format(
+        caption="▶️ **Memulai** nih lagu yang lu mau {} via XVII MUSIC ᕙ(`▿´)ᕗ".format(
         message.from_user.mention()
         ),
     )
@@ -538,7 +538,7 @@ async def play(_, message: Message):
 )
 async def deezer(client: Client, message_: Message):
     global que
-    lel = await message_.reply("🔄 **Processing**")
+    lel = await message_.reply("🔄 **memproses**")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     usar = await USER.get_me()
@@ -549,7 +549,7 @@ async def deezer(client: Client, message_: Message):
                    invitelink = await client.export_chat_invite_link(chid)
                except:
                    await lel.edit(
-                       "<b>Add me as admin of yor group first</b>",
+                       "<b>jadikan aku admin dulu :)</b>",
                    )
                    return
 
@@ -565,7 +565,7 @@ async def deezer(client: Client, message_: Message):
                    #print(e)
                    #await lel.edit(
                    #    f"<b>User {user.first_name} couldn't join your group! Make sure user is not banned in group."
-                   #    "\n\nOr manually add @DaisyXmusic to your Group and try again</b>",
+                   #    "\n\nOr manually add @lifeisuckx to your Group and try again</b>",
                    #)
                    pass
     try:
@@ -655,7 +655,7 @@ async def deezer(client: Client, message_: Message):
         chat_id=message_.chat.id,
         reply_markup=keyboard,
         photo="final.png",
-        caption=f"✯DaisyXmusic✯= #️⃣ Queued at position {position}.)."
+        caption=f"✯XVIImusic✯= #️⃣ Queued at position {position}.)."
     ) 
     os.remove("final.png")
 
@@ -667,7 +667,7 @@ async def deezer(client: Client, message_: Message):
 )
 async def jiosaavn(client: Client, message_: Message):
     global que
-    lel = await message_.reply("🔄 **Processing**")
+    lel = await message_.reply("🔄 **memproses**")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     usar = await USER.get_me()
@@ -739,7 +739,7 @@ async def jiosaavn(client: Client, message_: Message):
              [
                InlineKeyboardButton(
                    text="Join Updates Channel",
-                   url='https://t.me/daisyxupdates')
+                   url='https://t.me/loveiswarxvii')
              ],
              [       
                InlineKeyboardButton(
@@ -763,12 +763,12 @@ async def jiosaavn(client: Client, message_: Message):
             chat_id=message_.chat.id,
             reply_markup=keyboard,
             photo="final.png",
-            caption=f"✯DaisyXmusic✯=#️⃣ Queued at position {position}",
+            caption=f"✯XVIImusic✯=#️⃣ Queued at position {position}",
         
         )           
            
     else:
-        await res.edit_text("✯DaisyXmusic✯=▶️ Playing.....")
+        await res.edit_text("✯XVIImusic✯=▶️ Playing.....")
         chat_id = message_.chat.id
         que[chat_id] = []
         qeue = que.get(message_.chat.id)
