@@ -9,7 +9,7 @@ from config import BOT_NAME as bn
 @Client.on_message(filters.command("start") & filters.private & ~filters.channel)
 async def start(_, message: Message):
     await message.reply_text(
-        f"""Hello 👋 there! I can play music in voice chats of Telegeam Groups. I have a lot of cool feature that will amaze you!\n\n🔴 Do you want me to play music in your Telegram groups'voice chats? Chat me @bossfightbot""",
+        f"""Hallo 👋 aku bot untuk pemutar music di group , invite aku ke group kamu dan jadikan admin untuk memutar music dan jangan lupa menambahkan asisten ku @lifeisuckx untuk info cara mengunakan bot klik < cara mengunakan bot > di bawah """,
         reply_markup=InlineKeyboardMarkup(
             [ 
                 [
@@ -21,7 +21,7 @@ async def start(_, message: Message):
                     )
                 ],[ 
                     InlineKeyboardButton(
-                        " ASSISTEN 🎙️", url="https://t.me/lifeisuckx"
+                        "CARA MENGUNAKAN BOT", url="https://telegra.ph/command-XVII-MUSIC-04-23"
                     )]
             ]
         ),
@@ -35,7 +35,7 @@ async def gstart(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🎙️ Support Group 🎙️", url="https://t.me/daisysupport_Official")
+                        "🎙️ Support Group 🎙️", url="https://t.me/loveiswarxvii")
                 ]
             ]
         )
