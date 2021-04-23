@@ -242,7 +242,7 @@ async def p_cb(b, cb):
             temp.append(t)
         now_playing = temp[0][0]
         by = temp[0][1].mention(style='md')
-        msg = "**Now Playing** in {}".format(cb.message.chat.title)
+        msg = "**memutar** in {}".format(cb.message.chat.title)
         msg += "\n- "+ now_playing
         msg += "\n- Req by "+by
         temp.pop(0)
@@ -302,7 +302,7 @@ async def m_cb(b, cb):
             temp.append(t)
         now_playing = temp[0][0]
         by = temp[0][1].mention(style='md')
-        msg = "**Now Playing** in {}".format(cb.message.chat.title)
+        msg = "**sedang memutar** di {}".format(cb.message.chat.title)
         msg += "\n- "+ now_playing
         msg += "\n- Req by "+by
         temp.pop(0)
@@ -374,7 +374,7 @@ async def m_cb(b, cb):
             if callsmusic.queues.is_empty(chat_id):
                 callsmusic.pytgcalls.leave_group_call(chat_id)
                 
-                await cb.message.edit('- No More Playlist..\n- Leaving VC!')
+                await cb.message.edit('- tidak ada requestan lagi..\n- Leaving VC!')
             else:
                 callsmusic.pytgcalls.change_stream(
                     chat_id,
@@ -382,7 +382,7 @@ async def m_cb(b, cb):
                 )
                 await cb.answer('Skipped')
                 await cb.message.edit((m_chat, qeue), reply_markup=r_ply(the_data))
-                await cb.message.reply_text(f'- Skipped track\n- Now Playing **{qeue[0][0]}**')
+                await cb.message.reply_text(f'- Skipped track\n- sekarang memutar **{qeue[0][0]}**')
 
     else:      
         if chat_id in callsmusic.pytgcalls.active_calls:
@@ -506,7 +506,7 @@ async def play(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
         photo="final.png", 
-        caption=f"#⃣ Your requested song **mengantri** at position {position}!",
+        caption=f"#⃣ sabar ya lagu kamu **mengantri** di posisi ke {position}!",
         reply_markup=keyboard)
         os.remove("final.png")
         return await lel.delete()
